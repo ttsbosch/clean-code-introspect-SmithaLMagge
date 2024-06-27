@@ -14,7 +14,7 @@ int StringCalculator :: add(const std::string& str)
 }
 
 int StringCalculator :: sumIntegersInString(const std::string& str) {
-    int sum = 0;
+    int res = 0;
     std::istringstream ss(str);
     std::string token;
 
@@ -23,18 +23,28 @@ int StringCalculator :: sumIntegersInString(const std::string& str) {
         std::string numStr;
 
         while (tokenStream >> numStr) { // Split by whitespace
-            bool isValidNumber = true;
-            for (char c : numStr) {
-                if (!std::isdigit(c)) {
-                    isValidNumber = false;
-                    break;
-                }
-            }
-            if (isValidNumber) {
-                sum += std::stoi(numStr);
-            }
+            int res = checkforDigit_Sum(numstr);
         }
     }
 
-    return sum;
+    return res;
+}
+
+int StringCalculator :: checkforDigit_Sum(const std::string& str)
+{
+   bool isValidNumber = true;
+    int sum = 0;
+   for (char c : numStr)
+   {
+        if (!std::isdigit(c)) 
+         {
+           isValidNumber = false;
+           break;
+         }
+    }
+   if (isValidNumber) 
+   {
+     sum += std::stoi(numStr);
+   }
+   return sum;
 }
