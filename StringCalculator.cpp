@@ -9,7 +9,7 @@ int StringCalculator :: add(string str)
   else
   {
     sum = sumIntegersInString(str);
-    return ;
+    return sum;
   }
 }
 
