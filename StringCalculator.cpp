@@ -1,7 +1,7 @@
 #include "StringCalculator.h"
 int StringCalculator :: add(string str)
 {
-  if(str == empty)
+  if(str->empty())
   {
     return 1;
   }
