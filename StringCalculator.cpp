@@ -1,5 +1,5 @@
 #include "StringCalculator.h"
-int StringCalculator :: add(string str)
+int StringCalculator :: add(const std::string& str)
 {
   uint sum =0;
   if(str.empty() || str == "0")
