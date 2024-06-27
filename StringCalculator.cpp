@@ -33,14 +33,15 @@ int StringCalculator :: splitStringcheckforDelimiter(const std::string& str) {
 }
 
 int StringCalculator :: checkForNumbers(const std::string& str) {
+  int retvalue = 0;
         if (isValidNumber(str)) {
             int number = std::stoi(str);
             if (number < 0) {
-                throw std::runtime_error("Negative number found: " + str);
+                retvalue = 0;
             }
-            return number;
+            retvalue = number;
         }
-        return 0;
+        return retvalue;
     }
 
  bool StringCalculator :: isValidNumber(const std::string& str) {
