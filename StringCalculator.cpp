@@ -8,12 +8,12 @@ int StringCalculator :: add(const std::string& str)
   }
   else
   {
-    sum = sumIntegersInString(str);
+    sum = splitStringcheckforDelimiter(str);
     return sum;
   }
 }
 
-int StringCalculator :: sumIntegersInString(const std::string& str) {
+int StringCalculator :: splitStringcheckforDelimiter(const std::string& str) {
     int res = 0;
     std::istringstream ss(str);
     std::string token;
@@ -23,14 +23,14 @@ int StringCalculator :: sumIntegersInString(const std::string& str) {
         std::string numStr;
 
         while (tokenStream >> numStr) { // Split by whitespace
-            int res = checkforDigit_Sum(numStr);
+            int res = checkfornumbers(numStr);
         }
     }
 
     return res;
 }
 
-int StringCalculator :: checkforDigit_Sum(const std::string& str)
+int StringCalculator :: checkfornumbers(const std::string& str)
 {
    bool isValidNumber = true;
     int sum = 0;
