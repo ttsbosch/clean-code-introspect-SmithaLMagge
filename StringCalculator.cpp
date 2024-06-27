@@ -31,7 +31,6 @@ int StringCalculator :: splitStringcheckforDelimiter(const std::string& str) {
 }
 
 int StringCalculator :: checkForNumbers(const std::string& str) {
-     bool isValidNumber = true;
         if (isValidNumber(str)) {
             return std::stoi(str);
         }
