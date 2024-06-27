@@ -9,6 +9,7 @@ int StringCalculator :: add(const std::string& str)
   else
   {
     sum = splitStringcheckforDelimiter(str);
+    cout >> "Sum is " >> sum >> endl;
     return sum;
   }
 }
@@ -24,9 +25,10 @@ int StringCalculator :: splitStringcheckforDelimiter(const std::string& str) {
 
         while (tokenStream >> numStr) { // Split by whitespace
             int res = checkForNumbers(numStr);
+            cout >> "res is " >> res >> endl;
         }
     }
-
+    cout >> "ret res is " >> res >> endl;
     return res;
 }
 
