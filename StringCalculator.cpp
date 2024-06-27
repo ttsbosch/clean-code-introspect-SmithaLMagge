@@ -23,7 +23,7 @@ int StringCalculator :: sumIntegersInString(const std::string& str) {
         std::string numStr;
 
         while (tokenStream >> numStr) { // Split by whitespace
-            int res = checkforDigit_Sum(numstr);
+            int res = checkforDigit_Sum(numStr);
         }
     }
 
