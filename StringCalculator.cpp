@@ -13,7 +13,7 @@ int StringCalculator :: add(string str)
   }
 }
 
-int sumIntegersInString(const std::string& str) {
+int StringCalculator :: sumIntegersInString(const std::string& str) {
     int sum = 0;
     std::istringstream ss(str);
     std::string token;
