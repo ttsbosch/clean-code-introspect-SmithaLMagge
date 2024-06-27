@@ -1,5 +1,12 @@
 #include "StringCalculator.h"
 int StringCalculator :: add(string str)
 {
-  return 0;
+  if(str == empty)
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
 }
