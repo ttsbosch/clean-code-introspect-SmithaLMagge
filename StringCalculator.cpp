@@ -34,7 +34,11 @@ int StringCalculator :: splitStringcheckforDelimiter(const std::string& str) {
 
 int StringCalculator :: checkForNumbers(const std::string& str) {
         if (isValidNumber(str)) {
-            return std::stoi(str);
+            int number = std::stoi(str);
+            if (number < 0) {
+                throw std::runtime_error("Negative number found: " + str);
+            }
+            return number;
         }
         return 0;
     }
