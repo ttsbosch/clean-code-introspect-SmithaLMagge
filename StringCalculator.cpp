@@ -40,10 +40,12 @@ int StringCalculator :: checkForNumbers(const std::string& str) {
     }
 
  bool StringCalculator :: isValidNumber(const std::string& str) {
+        bool isNumber = true;
         for (char c : str) {
             if (!std::isdigit(c) && c != '-') {
-                return false;
+                isNumber = false;
+                break;
             }
         }
-        return true;
+        return isNumber ? true:false;
     }
