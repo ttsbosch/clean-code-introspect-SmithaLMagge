@@ -7,7 +7,6 @@ using namespace std;
 class StringCalculator {
 private:
  int splitStringcheckforDelimiter(const std::string& str);
- int checkfornumbers(const std::string& str);
  int checkForNumbers(const std::string& str);
  bool isValidNumber(const std::string& str);
 public:
