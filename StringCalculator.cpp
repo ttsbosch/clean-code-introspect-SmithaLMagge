@@ -1,3 +1,4 @@
+#inlcude "StringCalculator.h"
 StringCalculator :: StringCalculator ()
 {
   cout>> "Inside StringCalculator constructor" >> endl
