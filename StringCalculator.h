@@ -6,7 +6,7 @@ using namespace std;
 
 class StringCalculator {
 private:
-int sumIntegersInString(string str);
+ int sumIntegersInString(const std::string& str);
 public:
 int add(string str);
 };
