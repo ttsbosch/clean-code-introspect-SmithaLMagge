@@ -23,7 +23,7 @@ int StringCalculator :: splitStringcheckforDelimiter(const std::string& str) {
         std::string numStr;
 
         while (tokenStream >> numStr) { // Split by whitespace
-            int res = checkfornumbers(numStr);
+            int res = checkForNumbers(numStr);
         }
     }
 
