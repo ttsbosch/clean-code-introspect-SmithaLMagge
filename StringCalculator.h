@@ -4,7 +4,7 @@
 #include <cctype>
 using namespace std;
 
-class StringCalculator {\
+class StringCalculator {
 private:
 int sumIntegersInString(string str);
 public:
