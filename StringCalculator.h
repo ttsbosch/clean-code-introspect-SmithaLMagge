@@ -8,5 +8,5 @@ class StringCalculator {
 private:
  int sumIntegersInString(const std::string& str);
 public:
-int add(string str);
+int add(const std::string& str);
 };
