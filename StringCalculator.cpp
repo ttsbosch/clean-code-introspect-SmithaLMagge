@@ -13,17 +13,16 @@ int StringCalculator :: add(string str)
   }
 }
 
-int StringCalculator :: sumIntegersInString(string str)
-{
-   int sum = 0;
+int sumIntegersInString(const std::string& str) {
+    int sum = 0;
     std::istringstream ss(str);
     std::string token;
 
-    while (getline(str, token, ',')) { // Split by any delimiter (here: ',')
+    while (std::getline(ss, token, ',')) { // Split by comma
         std::istringstream tokenStream(token);
         std::string numStr;
 
-        while (tokenStream >> numStr) { // Split by whitespace (including spaces, tabs, newlines)
+        while (tokenStream >> numStr) { // Split by whitespace
             bool isValidNumber = true;
             for (char c : numStr) {
                 if (!std::isdigit(c)) {
