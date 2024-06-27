@@ -30,21 +30,19 @@ int StringCalculator :: splitStringcheckforDelimiter(const std::string& str) {
     return res;
 }
 
-int StringCalculator :: checkfornumbers(const std::string& str)
-{
-   bool isValidNumber = true;
-    int sum = 0;
-   for (char c : str)
-   {
-        if (!std::isdigit(c)) 
-         {
-           isValidNumber = false;
-           break;
-         }
+int StringCalculator :: checkForNumbers(const std::string& str) {
+     bool isValidNumber = true;
+        if (isValidNumber(str)) {
+            return std::stoi(str);
+        }
+        return 0;
     }
-   if (isValidNumber) 
-   {
-     sum += std::stoi(str);
-   }
-   return sum;
-}
+
+ int StringCalculator :: bool isValidNumber(const std::string& str) {
+        for (char c : str) {
+            if (!std::isdigit(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
