@@ -41,7 +41,7 @@ int StringCalculator :: checkForNumbers(const std::string& str) {
 
  bool StringCalculator :: isValidNumber(const std::string& str) {
         for (char c : str) {
-            if (!std::isdigit(c)) {
+            if (!std::isdigit(c) && c != '-') {
                 return false;
             }
         }
