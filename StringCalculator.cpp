@@ -34,7 +34,7 @@ int StringCalculator :: checkforDigit_Sum(const std::string& str)
 {
    bool isValidNumber = true;
     int sum = 0;
-   for (char c : numStr)
+   for (char c : str)
    {
         if (!std::isdigit(c)) 
          {
@@ -44,7 +44,7 @@ int StringCalculator :: checkforDigit_Sum(const std::string& str)
     }
    if (isValidNumber) 
    {
-     sum += std::stoi(numStr);
+     sum += std::stoi(str);
    }
    return sum;
 }
