@@ -1,8 +1,14 @@
-#include<iostream>
-#include<string>
-
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <cctype>
 using namespace std;
-class StringCalculator{
-    public:
-    int add(string input);
+
+class StringCalculator {
+private:
+ int splitStringcheckforDelimiter(const std::string& str);
+ int checkForNumbers(const std::string& str);
+ bool isValidNumber(const std::string& str);
+public:
+int add(const std::string& str);
 };
